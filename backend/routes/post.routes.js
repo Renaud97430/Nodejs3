@@ -6,7 +6,7 @@ router.get("/", (req, res) => {
     res.json({ message: "Voici les messages"});
 });
 
-router.post("/", setPost);
+router.post("/", setPosts);
 
 router.put("/:id", (req, res) => {
     res.json({ messageId : req.params.id});
