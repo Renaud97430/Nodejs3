@@ -11,7 +11,7 @@ const app = express();
 // });
 //connection a la DB
 
-// Middleware qui permet de traiter les données de la request
+// Middleware qui permet de traiter les données de la request ...
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
