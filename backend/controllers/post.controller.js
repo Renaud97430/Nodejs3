@@ -38,9 +38,9 @@ module.exports.deletePost = async (req, res) => {
     const post = await PostModel.findById(req.params.id);
 
     if (!post) {
-        res.status(400).json({message: "Ce post n'existe pas"})
+        res.status(400).json({message: "Ce post n'existe pas"});
     }
 
-    await PostModel.remove();
-    res.status(200).json("Message supprimé " + post);
+    await post.remove();
+    res.status(200).json("Message supprimé " + req.params.id);
 }
