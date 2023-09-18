@@ -7,8 +7,10 @@ const postSchema = mongoose.Schema(
             required: true
         },
         author: {
-            type: String,
-            required: true
+            // type: String,
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            ref: 'User'
         },
         likers: {
             type: [String]
