@@ -35,6 +35,7 @@ module.exports.deletePost = async (req, res) => {
         res.status(400).json({message: "Ce post n'existe pas"});
     }
     await post.deleteOne();
+    
     res.status(200).json("Message supprimé " + req.params.id);
 }
 

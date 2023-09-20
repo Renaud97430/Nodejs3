@@ -37,6 +37,10 @@ module.exports.deleteUser = async (req, res) => {
     }
     
     await user.deleteOne();
+//     userShema.pre('remove', async function(next) {
+//         const user = this
+//         await Task.deleteMany({author : req.params.id})
+// });
 
     res.status(200).json("Utilisateur supprimé " + req.params.id);
 }
